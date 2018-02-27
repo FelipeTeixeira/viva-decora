@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="vidaDecora-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ff3e3e">
+    <title>
+        Viva Decora
+    </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/routes.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="controllers/master.controller.js"></script>
+    <script src="controllers/uncured.movie.controller.js"></script>
+    <script src="controllers/favorite.movie.controller.js"></script>
+    <script src="controllers/not.favorite.movie.controller.js"></script>
+    <!-- FACTORY -->
+    <script src="factory/uncured.movie.factory.js"></script>
+</head>
+    <body>
+        <div ui-view></div>
+    </body>
+</html>

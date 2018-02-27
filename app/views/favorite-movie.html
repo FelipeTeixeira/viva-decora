@@ -1,0 +1,40 @@
+
+	<section class="thumbnail-container">
+		<h1 class="title-page">
+			FILMES CURTIDOS
+		</h1>
+
+		<figure class="thumbnail" ng-repeat="movie in movieList">
+			<img src="https://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="{{movie.title}}" class="thumbnail-img">
+			<figcaption class="thumbnail-legend">
+				<h2 class="thumbnail-legend-name">
+					{{movie.title}}
+				</h2>
+				<div class="thumbnail-review">
+					<i class="icon icon-favorite"></i>
+					<i class="icon icon-favorite"></i>
+					<i class="icon icon-favorite"></i>
+					<i class="icon icon-favorite"></i>
+					<i class="icon icon-not-favorite"></i>
+
+					<span class="thumbnail-review-total">
+						({{ movie.vote_count}} avaliações)
+					</span>
+				</div>
+				<p class="thumbnail-description">
+					{{movie.overview | cut:true:100:' ...'}}
+				</p>
+				<a ng-click="openModal(movie)" class="thumbnail-viewSynopsis">
+                	Ver Sinopse
+				</a>
+			</figcaption>
+		</figure>
+
+		<div ng-show="movieList.length === 0" class="thumbnail-notMovie">
+			<img src="assets/img/not-movie.png" alt="Nenhum file" class="thumbnail-notMovie-img">
+			<h3 class="thumbnail-notMovie-title">
+				NENHUM FILME
+			</h3>
+		</div>
+
+	</section>

@@ -1,0 +1,56 @@
+
+    <div ng-repeat="movie in movieList" class="uncuredMovie-container">
+        <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
+            <img src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" alt="{{movie.title}}" class="uncuredMovie-img" itemprop="image">
+            <figcaption class="uncuredMovie-info">
+                <h1 itemprop="name" class="uncuredMovie-name">
+                    {{movie.title}}
+                </h1>
+
+                <div class="uncuredMovie-review">
+                    <span class="uncuredMovie-review-favoriteImg">
+                        <span class="uncuredMovie-review-favoriteImg-favorite" style="width: {{movie.vote_average * 10}}%"></span>
+                    </span>
+                    <div class="uncuredMovie-review-total">
+                        ({{ movie.vote_count}} avaliações)
+                    </div>
+                </div>
+                <p class="uncuredMovie-details">
+                    <span itemprop="dateCreated">
+                        {{ movie.release_date | date: 'MM/yyyy'}}
+                    </span>
+                </p>
+                <p class="uncuredMovie-synopsis" itemprop="description">
+                    {{movie.overview | cut:true:100:' ...'}}
+                </p>
+                <a ng-click="openModal(movie)" class="uncuredMovie-viewSynopsis">
+                    Ver Sinopse
+                </a>
+            </figcaption>
+        </figure>
+        <div class="uncuredMovie-action">
+            <button class="btn btn-round" ng-click="unlike(movie)">
+                <i class="icon icon-n-like"></i>
+                <span class="btn-name">
+                    Não curti
+                </span>
+            </button>
+
+            <button class="btn btn-jump" ng-click="jump(movie)">
+                Pular
+            </button>
+
+            <button class="btn btn-round" ng-click="like(movie)">
+                <i class="icon icon-like"></i>
+                <span class="btn-name">
+                    Curti
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div ng-show="movieList.length === 0">
+        <h2 class="uncuredMovie-not-movie">
+            Acabaram nossos filmes :(
+        </h2>
+    </div>

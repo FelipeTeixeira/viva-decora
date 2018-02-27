@@ -1,0 +1,52 @@
+.menu {
+    @media (max-width: $screen-tablet-max) {
+        position: fixed;
+        background-color: #444;
+        top: 0;
+        height: 100%;
+        width: $menu-width;
+        display: flex;
+        align-items: center;
+
+        @include transform(translateX(-$menu-width));
+        transition: transform 0.2s ease;
+        z-index: 10;
+    }
+
+    @media (min-width: $screen-tablet-min) {
+        text-align: center;
+        padding-bottom: 30px;
+        // background-image: linear-gradient(to bottom, rgba(255, 28, 28, 0.6) 0%, rgba(255, 86, 86, 1) 100%);
+        // TO DO
+        // ajustar isso, tentar deixar o menu DENTRO do header
+        // background: #fe3131;
+    }
+
+    .menu-list {
+        @media (min-width: $screen-tablet-min) {
+            display: inline-block;
+        }
+    }
+
+    .menu-link {
+        // MENU MOBILE
+        @media (max-width: $screen-tablet-max) {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 16px 24px;
+            display: block;
+        }
+        // MENU DESKTOP
+        @media (min-width: $screen-tablet-min) {
+            font-size: 1.0em;
+            color: #d5d5d6;
+            text-transform: uppercase;
+            margin: 16px 24px 0;
+            border-bottom: 5px solid transparent;
+            display: block;
+            transition: border 0.2s ease;
+        }
+    }
+}

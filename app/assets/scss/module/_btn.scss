@@ -1,0 +1,46 @@
+.btn {
+    font-weight: 900;
+    font-size: 0.9em;
+    text-align: center;
+    color: #444;
+    background-color: #FFF;
+    min-width: 96px;
+    min-height: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+
+    @media (min-width: $screen-tablet-min) {
+        min-height: 80px;
+    }
+
+    &.btn-round {
+        border-radius: 50%;
+        min-height: 80px;
+        min-width: 80px;
+
+        @media (min-width: $screen-tablet-min) {
+            min-width: 226px;
+            border-radius: 50px;
+        }
+    }
+
+    .btn-name {
+        display: none;
+
+        @media (min-width: $screen-tablet-min) {
+            font-size: 1.2em;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            top: 10px;
+            padding-left: 12px;
+        }
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+}

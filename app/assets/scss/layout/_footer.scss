@@ -1,0 +1,22 @@
+.footer {
+    display: none;
+
+    @media (min-width: $screen-tablet-min) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #4e4e4e;
+        width: 100%;
+        height: $footer-height;
+        position: relative;
+        z-index: 1;
+
+        .icon {
+            vertical-align: bottom;
+            fill: #d8d8d8;
+            width: 18px;
+            height: 18px;
+            margin: 0 12px;
+        }
+    }
+}

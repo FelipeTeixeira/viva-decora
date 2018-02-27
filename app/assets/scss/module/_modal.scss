@@ -1,0 +1,122 @@
+.modal {
+    visibility: hidden;
+    max-width: 724px;
+    border-radius: 10px;
+    width: calc(100% - 16px);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    margin: 12px auto 12px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: $z-index-header + 2;
+
+    @media (min-width: $screen-tablet-min) {
+        @include center;
+    }
+
+    .modal-header {
+        background-color: #ff5656;
+        border-radius: 10px 10px 0 0;
+        height: 116px;
+        position: relative;
+
+        .modal-header-movieImg-bg {
+            position: relative;
+            top: 32px;
+
+            &:before {
+                content: "";
+                background-color: #FFF;
+                width: 100%;
+                display: block;
+                height: 70px;
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+            }
+        }
+
+        .modal-header-movieImg {
+            @extend %movie-img;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-round {
+            font-size: 1.4em;
+            font-weight: normal;
+            min-height: 44px;
+            min-width: 44px;
+            line-height: 44px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+
+            @media (min-width: $screen-tablet-min) {
+                font-size: 1.9em;
+                min-height: 64px;
+                min-width: 64px;
+                line-height: 64px;
+                right: -20px;
+                top: -20px;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 100px 24px 20px;
+
+        @media (min-width: $screen-tablet-min) {
+            padding: 100px 70px 70px;
+        }
+    }
+
+    .modal-infoMovie {
+        text-align: center;
+
+        .modal-infoMovie-name {
+            font-size: 1.53em;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .modal-infoMovie-details {
+            font-size: 0.89em;
+            color: #929292;
+            text-transform: uppercase;
+
+            .modal-infoMovie-details-time {
+                display: block;
+
+                @media (min-width: $screen-tablet-min) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .modal-infoMovie-review {
+            color: #929292;
+            margin-top: 16px;
+
+            .modal-infoMovie-review-total {
+                font-size: 0.89em;
+                margin-top: 8px;
+                display: block;
+            }
+        }
+    }
+
+    .modal-descriptionMovie {
+        font-size: 1.1em;
+        line-height: 1.6em;
+        margin-top: 16px;
+        color: #444;
+
+        @media (min-width: $screen-tablet-min) {
+            margin-top: 24px;
+        }
+    }
+}

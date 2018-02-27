@@ -1,0 +1,43 @@
+<div ng-class="{'is-pg-uncured': $location.path() === '/filmes-nao-curados'}"
+     ng-style="$location.path() === '/filmes-nao-curados' && {'backgroundImage':'url(https://image.tmdb.org/t/p/w600'+ movieList[0].backdrop_path+''}">
+
+    <div ng-include="'views/template/svg.html'"></div>
+    <header class="header-bg" ng-include="'views/template/header.html'"></header>
+
+    <main ui-view></main>
+</div>
+<footer ng-include="'views/template/footer.html'"></footer>
+
+<div id="modal-movie" class="modal" tabindex="-1" role="dialog">
+    <header class="modal-header">
+        <figure class="modal-header-movieImg-bg">
+            <img src="https://image.tmdb.org/t/p/w300{{movieModal.backdrop_path}}" alt="{{movieModal.title}}" class="modal-header-movieImg">
+        </figure>
+        <a ng-click="closeModal()" class="btn btn-round">
+            X
+        </a>
+    </header>
+    <div class="modal-body">
+        <div class="modal-infoMovie">
+            <h3 class="modal-infoMovie-name">
+                {{movieModal.title}}
+            </h3>
+            <p class="modal-infoMovie-details">
+                {{ movieModal.release_date | date: 'MM/yyyy'}}
+            </p>
+            <div class="modal-infoMovie-review">
+                <i class="icon icon-favorite"></i>
+                <i class="icon icon-favorite"></i>
+                <i class="icon icon-favorite"></i>
+                <i class="icon icon-favorite"></i>
+                <i class="icon icon-not-favorite-black"></i>
+                <span class="modal-infoMovie-review-total">
+                      ({{ movieModal.vote_count}} avaliações)
+                </span>
+            </div>
+        </div>
+        <p class="modal-descriptionMovie">
+            {{movieModal.overview}}
+        </p>
+    </div>
+</div>

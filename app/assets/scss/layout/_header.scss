@@ -1,0 +1,46 @@
+// tiver que criar uma class para bg do Topo pois,
+// se eu colocar a TAG <nav> dentro da classe .header, eu nao consigo fazer a transição utilizando o transform
+
+.header-bg {
+    background-image: linear-gradient(to bottom, rgba(255, 28, 28, 0.8) 0%, rgba(255, 86, 86, 1) 100%);
+    animation: header 1s;
+    z-index: 10;
+    position: relative;
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+.header {
+    min-height: 80px;
+	display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    transition: transform 0.2s ease;
+
+
+    .header-logo {
+        margin: auto;
+        display: block;
+
+        .header-logo-img {
+            width: 140px;
+            fill: #FFF;
+        }
+    }
+
+    .header-icon-menu {
+        position: absolute;
+        padding: 18px;
+        cursor: pointer;
+
+        .icon-menu {
+            text-indent: -9999px;
+            display: block;
+        }
+
+        @media (min-width: $screen-tablet-min) {
+            display: none;
+        }
+    }
+}

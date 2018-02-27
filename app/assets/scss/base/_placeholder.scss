@@ -1,0 +1,15 @@
+%movie-img {
+    width: 145px;
+    height: 174px;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
+}
+
+// ELLIPSIS text
+%text-ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

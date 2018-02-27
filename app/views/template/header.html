@@ -1,0 +1,36 @@
+<div class="header">
+    <button class="header-icon-menu" ng-click="openMenu()">
+        <i class="icon-menu">
+            Navegação
+        </i>
+    </button>
+    <a class="header-logo">
+        <img src="assets/img/logo-viva-decora.svg" alt="Logo Viva Decora" class="header-logo-img">
+    </a>
+</div>
+
+<nav id="menu" class="menu">
+    <ul>
+        <li class="menu-list">
+            <a href="#/filmes-nao-curados" class="menu-link"
+                ng-class="{'is-link-active': $location.path() === '/filmes-nao-curados'}"
+                ng-click="closeMenu()">
+                Filmes não curados
+            </a>
+        </li>
+        <li class="menu-list">
+            <a href="#/filmes-curtidos" class="menu-link"
+                ng-class="{'is-link-active': $location.path() === '/filmes-curtidos'}"
+                ng-click="closeMenu()">
+                Filmes Curtidos
+            </a>
+        </li>
+        <li class="menu-list">
+            <a href="#/filmes-nao-curtidos" class="menu-link"
+                ng-class="{'is-link-active': $location.path() === '/filmes-nao-curtidos'}"
+                ng-click="closeMenu()">
+                Filmes não curtidos
+            </a>
+        </li>
+    </ul>
+</nav>
