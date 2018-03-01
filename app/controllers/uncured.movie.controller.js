@@ -10,7 +10,7 @@
 
         var init = function() {
             $scope.like = function (movie) {
-                UncuredMovieFactory.favorite.push(movie);
+                UncuredMovieFactory.favorite.unshift(movie);
                 $scope.movieList.splice( $scope.movieList.indexOf(movie), 1 );
             };
 
@@ -19,7 +19,7 @@
             };
 
             $scope.unlike = function (movie) {
-                UncuredMovieFactory.notFavorite.push(movie);
+                UncuredMovieFactory.notFavorite.unshift(movie);
                 $scope.movieList.splice( $scope.movieList.indexOf(movie), 1 );
             };
         };
