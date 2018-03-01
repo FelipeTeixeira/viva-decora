@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('vidaDecora-app', ['ui.router']);
+    angular.module('vidaDecora-app', ['ui.router', 'directivesApp']);
 
   angular.module('vidaDecora-app')
     .run(function($rootScope, $location) {

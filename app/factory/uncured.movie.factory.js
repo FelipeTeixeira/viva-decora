@@ -6,6 +6,7 @@
         var notFavorite = [];
         var favorite = [];
         var movies = null;
+
         var loadMovies = function() {
             var deferred = $q.defer();
             if (movies !== null) {
@@ -18,7 +19,7 @@
                     movies = response.data.items.sort(function(a, b) { return a.id - b.id;});
                     deferred.resolve(movies);
                 }, function(response) {
-                deferred.reject(response.data);
+                    deferred.reject(response.data);
                 });
             }
             return deferred.promise;
