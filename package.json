@@ -15,5 +15,8 @@
     "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^2.2.0",
     "gulp.spritesmith": "^6.5.1"
+  },
+  "dependencies": {
+    "connect-history-api-fallback": "^1.5.0"
   }
 }
