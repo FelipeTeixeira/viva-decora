@@ -8,8 +8,7 @@
 html,
 body {
     height: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
+    min-height: 100%;    
 }
 
 body {
@@ -17,6 +16,7 @@ body {
     background-color: #F4F4F4;
     font-family: $font;
     color: #444;
+    overflow-x: hidden;
 }
 
 main {

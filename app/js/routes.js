@@ -32,17 +32,3 @@ angular.module('vidaDecora-app')
         }
     ]);
 })();
-// $stateProvider.state('master', {
-//         templateUrl: 'app/views/master/master.html',
-//         'abstract' : true,
-//         controller: 'MasterCtrl',
-//         data: {
-//             requireLogin: true
-//         },
-//         resolve: {
-//             loadCtrl: ["$q", function($q) {
-//                 var deferred = $q.defer();
-//                 require(['views/master/master.ctrl'], function() { deferred.resolve(); });
-//                 return deferred.promise;
-//             }],
-//         },
