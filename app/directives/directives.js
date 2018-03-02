@@ -54,4 +54,21 @@ angular.module("directivesApp", [])
 	ddo.templateUrl = "directives/templates/modal-movie.html";
 
 	return ddo;
+})
+
+.directive("reviewFavorites", function () {
+
+	var ddo = {};
+
+	ddo.restrict = "E";
+	ddo.transclude = true;
+
+	ddo.scope = {
+		voteAverage: "@",
+		width: "@"
+	};
+
+	ddo.templateUrl = "directives/templates/review-favorites.html";
+
+	return ddo;
 });
