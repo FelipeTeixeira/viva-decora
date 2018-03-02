@@ -42,9 +42,10 @@
 }
 
 .is-pg-uncured {
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    @include bgCover();
     transition: background .2s ease;
     // mobile sem rodape
     min-height: calc(100vh);
