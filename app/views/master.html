@@ -28,11 +28,11 @@
                 {{ movieModal.release_date | date: 'MM/yyyy'}}
             </p>
             <div class="modal-infoMovie-review">
-                <i class="icon icon-favorite"></i>
-                <i class="icon icon-favorite"></i>
-                <i class="icon icon-favorite"></i>
-                <i class="icon icon-favorite"></i>
-                <i class="icon icon-not-favorite-black"></i>
+
+                <span class="uncuredMovie-review-favoriteImg">
+                    <span class="uncuredMovie-review-favoriteImg-favorite" style="width: {{movieModal.vote_average * 10}}%"></span>
+                </span>
+
                 <span class="modal-infoMovie-review-total">
                       ({{ movieModal.vote_count}} avaliações)
                 </span>

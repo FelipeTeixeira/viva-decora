@@ -11,14 +11,14 @@
         $scope.movieList = null;
 
         var init = function() {
-            //Carrega a lista de filmes
+            // Carrega a lista de filmes
             if (UncuredMovieFactory.movies !== null) {
-                $scope.movieList = UncuredMovieFactory.movies;
+                $scope.movieList = UncuredMovieFactory.movies.results;                
             } else {
                 UncuredMovieFactory.loadMovies().then(function(items) {
                     return $scope.movieList = items;
                 });
-            }
+            }          
 
             var html  = document.querySelector("html"),
                 modal   = document.querySelector("#modal-movie");

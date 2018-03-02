@@ -1,7 +1,10 @@
 
+
+
+
     <div ng-repeat="movie in movieList" class="uncuredMovie-container">
         <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
-            <img src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" alt="{{movie.title}}" class="uncuredMovie-img" itemprop="image">
+            <img ng-if="movie.backdrop_path" ng-src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" alt="{{movie.title}}" class="uncuredMovie-img" itemprop="image">
             <figcaption class="uncuredMovie-info">
                 <h1 itemprop="name" class="uncuredMovie-name">
                     {{movie.title}}
@@ -28,6 +31,7 @@
                 </a>
             </figcaption>
         </figure>
+
         <div class="uncuredMovie-action">
             <button class="btn btn-round" ng-click="unlike(movie)">
                 <i class="icon icon-n-like"></i>
