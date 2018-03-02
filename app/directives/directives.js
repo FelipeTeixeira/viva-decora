@@ -41,7 +41,13 @@ angular.module("directivesApp", [])
 	ddo.restrict = "E";
 
 	ddo.scope = {
-		countMovie: "@"
+		name: "@",
+		image: "@",
+		date: "@",
+		overview: "@",
+		voteCount: "@",
+		voteAverage: "@",
+		closeModal: '&'
 	};
 
 	ddo.templateUrl = "directives/templates/modal-movie.html";

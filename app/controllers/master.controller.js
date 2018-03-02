@@ -20,18 +20,16 @@
                 });
             }          
 
-            var showModal = function (params) {
-                html.classList.add("is-modalOverlay-active");
-                modal.classList.add("is-modal-active");
+            // MODAL
+            var showModal = function (html, modal) {                
+                document.querySelector("html").classList.add("is-modalOverlay-active");
+                document.querySelector("#modal-movie").classList.add("is-modal-active");
             }
 
             var hideModal = function (params) {
-                html.classList.remove("is-modalOverlay-active");
-                modal.classList.remove("is-modal-active");
+                document.querySelector("html").classList.remove("is-modalOverlay-active");
+                document.querySelector("#modal-movie").classList.remove("is-modal-active");
             }
-
-            var html  = document.querySelector("html"),
-                modal   = document.querySelector("#modal-movie");
 
             $scope.openModal = function(movie) {
                 showModal();

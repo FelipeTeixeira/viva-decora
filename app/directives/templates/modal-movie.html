@@ -1,0 +1,33 @@
+<div id="modal-movie" class="modal" tabindex="-1" role="dialog">
+    <header class="modal-header">
+        <figure class="modal-header-movieImg-bg">
+            <img src="https://image.tmdb.org/t/p/w300{{image}}" alt="{{name}}" class="modal-header-movieImg">
+        </figure>
+        <button ng-click="closeModal()" class="btn btn-round">
+            X
+        </button>
+    </header>
+    <div class="modal-body">
+        <div class="modal-infoMovie">
+            <h3 class="modal-infoMovie-name">
+                {{name}}
+            </h3>
+            <p class="modal-infoMovie-details">
+                {{date}}
+            </p>
+            <div class="modal-infoMovie-review">
+
+                <span class="uncuredMovie-review-favoriteImg">
+                    <span class="uncuredMovie-review-favoriteImg-favorite" style="width: {{voteAverage * 10}}%"></span>
+                </span>
+
+                <span class="modal-infoMovie-review-total">
+                    ({{voteCount}} avaliações)
+                </span>
+            </div>
+        </div>
+        <p class="modal-descriptionMovie">
+            {{overview}}
+        </p>
+    </div>
+</div>
