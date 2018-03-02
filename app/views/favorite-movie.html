@@ -3,13 +3,13 @@
 			FILMES CURTIDOS
 		</h1>
 
-		<movie-card ng-repeat="movie in movieList" 
+		<card-movie ng-repeat="movie in movieList" 
 			title="{{movie.title}}" 
 			image="{{movie.backdrop_path}}"
 			vote="{{movie.vote_count}}"
-			overview="{{movie.overview}}"
-			movie="{{movie}}"
-			></movie-card>
+			overview="{{movie.overview}}"			
+			action="openModal(movie)"
+			></card-movie>
 	</section>
 
 	<not-movie count-movie="{{movieList.length}}"></not-movie>

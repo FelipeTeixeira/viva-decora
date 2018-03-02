@@ -1,6 +1,6 @@
 angular.module("directivesApp", [])
 
-.directive("movieCard", function () {
+.directive("cardMovie", function () {
 
 	var ddo = {};
 
@@ -14,7 +14,7 @@ angular.module("directivesApp", [])
 		action: '&'
 	};
 
-	ddo.templateUrl = "directives/movie-card.html";
+	ddo.templateUrl = "directives/templates/card-movie.html";
 
 	return ddo;
 })
@@ -29,7 +29,22 @@ angular.module("directivesApp", [])
 		countMovie: "@"
 	};
 
-	ddo.templateUrl = "directives/not-movie.html";
+	ddo.templateUrl = "directives/templates/not-movie.html";
+
+	return ddo;
+})
+
+.directive("modalMovie", function () {
+
+	var ddo = {};
+
+	ddo.restrict = "E";
+
+	ddo.scope = {
+		countMovie: "@"
+	};
+
+	ddo.templateUrl = "directives/templates/modal-movie.html";
 
 	return ddo;
 });

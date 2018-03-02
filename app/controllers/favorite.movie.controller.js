@@ -8,5 +8,6 @@
 
     function FavoriteMovieController($scope, UncuredMovieFactory) {
         $scope.movieList = UncuredMovieFactory.favorite;
+        
     }
 })();
