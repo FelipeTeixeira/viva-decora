@@ -1,11 +1,8 @@
-<div ng-class="{'is-pg-uncured': $location.path() === '/filmes-nao-curados'}"
-     ng-style="$location.path() === '/filmes-nao-curados' && {'backgroundImage':'url(https://image.tmdb.org/t/p/w600'+ movieList[0].backdrop_path+''}">
+<div ng-include="'views/template/svg.html'"></div>
 
-    <div ng-include="'views/template/svg.html'"></div>
-    <header class="header-bg" ng-include="'views/template/header.html'"></header>
+<header class="header-bg" ng-include="'views/template/header.html'"></header>
 
-    <main ui-view></main>
-</div>
+<main ui-view></main>
 
 <footer ng-include="'views/template/footer.html'"></footer>
 

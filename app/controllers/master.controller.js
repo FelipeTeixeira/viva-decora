@@ -7,19 +7,8 @@
     MasterController.$inject = ['$scope', 'UncuredMovieFactory'];
 
     function MasterController($scope, UncuredMovieFactory) {
-        //lista  exibir os filmes pro usuario
-        $scope.movieList = null;
-
         var init = function() {
-            // Carrega a lista de filmes
-            if (UncuredMovieFactory.movies !== null) {
-                $scope.movieList = UncuredMovieFactory.movies.results;                
-            } else {
-                UncuredMovieFactory.loadMovies().then(function(items) {
-                    return $scope.movieList = items;
-                });
-            }          
-
+            
             // MODAL
             var showModal = function (html, modal) {                
                 document.querySelector("html").classList.add("is-modalOverlay-active");
@@ -38,7 +27,7 @@
 
             $scope.closeModal = function() {
                 hideModal();
-            }
+            }            
         };
 
         init();

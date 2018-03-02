@@ -45,6 +45,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    transition: background .2s ease;
     // mobile sem rodape
     min-height: calc(100vh);
 

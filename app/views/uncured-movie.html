@@ -1,4 +1,4 @@
-   <div ng-repeat="movie in movieList" class="uncuredMovie-container">
+    <div ng-repeat="movie in movieList" class="uncuredMovie-container">
         <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
             <img ng-if="movie.backdrop_path" ng-src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" alt="{{movie.title}}" class="uncuredMovie-img" itemprop="image">
             <figcaption class="uncuredMovie-info">
@@ -48,8 +48,9 @@
         </div>
     </div>
 
-    <div ng-show="movieList.length === 0">
-        <h2 class="uncuredMovie-not-movie">
-            Acabaram nossos filmes :(
-        </h2>
-    </div>
+
+<div ng-show="movieList.length === 0">
+    <h2 class="uncuredMovie-not-movie">
+        acabaram nossos filmes :(
+    </h2>
+</div>
