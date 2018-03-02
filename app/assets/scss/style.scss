@@ -1,25 +1,26 @@
-@import "helpers/_queries";
-@import "helpers/_variables";
-@import "base/_mixins";
-@import "base/_placeholder";
-@import "base/_effects";
+@import "helpers/queries";
+@import "helpers/variables";
+@import "base/mixins";
+@import "base/placeholder";
+@import "base/effects";
 
-@import "base/_fonts";
-@import "base/_base";
-@import "layout/_header";
-@import "layout/_menu";
-@import "layout/_footer";
-
-
-@import "module/_btn";
-@import "module/_uncuredMovie";
-
-@import "module/_modal";
-@import "module/_sprite";
-@import "module/_thumbnail";
+@import "base/fonts";
+@import "base/base";
+@import "layout/header";
+@import "layout/menu";
+@import "layout/footer";
 
 
-@import "state/_state";
+@import "module/btn";
+@import "module/uncuredMovie";
+
+@import "module/modal";
+@import "module/sprite";
+@import "module/thumbnail";
+@import "module/reviewFavorites";
+
+
+@import "state/state";
 
 // SPRITE
 .icon {

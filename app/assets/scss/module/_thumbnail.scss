@@ -41,7 +41,7 @@
 
     .thumbnail-img {
         @extend %movie-img;
-
+        
         @media (min-width: $screen-tablet-min) {
             width: 294px;
             height: 350px;
@@ -49,6 +49,8 @@
     }
 
     .thumbnail-review {
+        display: flex;
+
         @media (min-width: $screen-tablet-min) {
             margin-bottom: 12px;
         }
@@ -57,9 +59,9 @@
             display: none;
 
             @media (min-width: $screen-tablet-min) {
-                display: block;
                 font-size: 0.9em;
-                float: right;
+                display: block;
+                margin-left: auto;
             }
         }
     }

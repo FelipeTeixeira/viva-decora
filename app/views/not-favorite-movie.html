@@ -5,9 +5,10 @@
 
 		<card-movie ng-repeat="movie in movieList" 
 			title="{{movie.title}}" 
-			image="{{movie.backdrop_path}}"
-			vote="{{movie.vote_count}}"
-			overview="{{movie.overview}}"		
+			image="{{movie.backdrop_path}}"			
+			overview="{{movie.overview}}"	
+			vote-count="{{movie.vote_count}}" 
+			vote-average="{{movie.vote_average}}"
 			action="openModal(movie)"
 			></card-movie>
 	</section>

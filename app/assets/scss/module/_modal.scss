@@ -124,36 +124,7 @@
         }
     }
 
-    // CRIAR COMPONENTE PA ESSE CARA AQUI
-     .uncuredMovie-review-favoriteImg {
-            max-width: 102px;
-            width: 100%;
-            height: 16px;
-            position: relative;
-            display: inline-block;
-
-            &:before,
-            .uncuredMovie-review-favoriteImg-favorite {
-                content: "";
-                display: inline-block;
-                width: 100%;
-                height: 16px;
-                position: absolute;
-                left: 0;
-            }
-
-            // ICON AVALIACAO NEGATIVA
-            &:before {
-                background: url(../img/icon-not-favorite-black.png) no-repeat;
-                z-index: 1;
-            }
-
-            // ICON AVALIACAO POSITIVA
-            .uncuredMovie-review-favoriteImg-favorite {
-                background: url(../img/icons-favorite.png) no-repeat;
-                width: 80%;
-                left: 1px;
-                z-index: 2;
-            }
-        }
+    .reviewFavorites {            
+        display: inline-block;        
+    }
 }

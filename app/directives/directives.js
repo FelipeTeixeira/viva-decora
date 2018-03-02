@@ -9,8 +9,9 @@ angular.module("directivesApp", [])
 	ddo.scope = {
 		title: "@",
 		image: "@",
-		vote: '@',
 		overview: '@',
+		voteCount: "@",
+		voteAverage: "@",
 		action: '&'
 	};
 

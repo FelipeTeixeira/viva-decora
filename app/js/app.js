@@ -6,6 +6,7 @@
     .run(function($rootScope, $location) {
         $rootScope.$location = $location;
         
+        // MENU
         var html = document.querySelector("html");
         $rootScope.openMenu = function() {
             html.classList.toggle("is-menu-active")
