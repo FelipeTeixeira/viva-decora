@@ -1,11 +1,11 @@
 <div ng-repeat="movie in movieList" class="uncuredMovie-container">
     <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
 
-        <img ng-src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" 
+        <img ng-src="{{movieImgPath}}w600{{movie.backdrop_path}}" 
              alt="{{movie.title}}" 
              class="uncuredMovie-img" 
              itemprop="image "
-             onerror="this.src='assets/img/logo-viva-decora.svg'">
+             on-error-src="assets/img/marvel-404.jpg"/>
 
         <figcaption class="uncuredMovie-info">
             <h1 itemprop="name" class="uncuredMovie-name">

@@ -9,6 +9,7 @@ angular.module("directivesApp", [])
 	ddo.scope = {
 		title: "@",
 		image: "@",
+		imagePath: "@",
 		overview: '@',
 		voteCount: "@",
 		voteAverage: "@",
@@ -16,21 +17,6 @@ angular.module("directivesApp", [])
 	};
 
 	ddo.templateUrl = "directives/templates/card-movie.html";
-
-	return ddo;
-})
-
-.directive("notMovie", function () {
-
-	var ddo = {};
-
-	ddo.restrict = "E";
-
-	ddo.scope = {
-		countMovie: "@"
-	};
-
-	ddo.templateUrl = "directives/templates/not-movie.html";
 
 	return ddo;
 })
@@ -44,6 +30,7 @@ angular.module("directivesApp", [])
 	ddo.scope = {
 		name: "@",
 		image: "@",
+		imagePath: "@",
 		date: "@",
 		overview: "@",
 		voteCount: "@",
@@ -77,6 +64,8 @@ angular.module("directivesApp", [])
 
 	var ddo = {};
 
+	ddo.restrict = "A";
+
 	ddo.link = function (scope, element, attrs) {
 		element.bind('error', function () {
 			if (attrs.src != attrs.onErrorSrc) {
@@ -86,4 +75,19 @@ angular.module("directivesApp", [])
 	}
 
 	return ddo;
-});
+})
+
+.directive("notMovie", function () {
+
+	var ddo = {};
+
+	ddo.restrict = "E";
+
+	ddo.scope = {
+		countMovie: "@"
+	};
+
+	ddo.templateUrl = "directives/templates/not-movie.html";
+
+	return ddo;
+})

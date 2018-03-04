@@ -8,7 +8,8 @@
 
 <modal-movie 
     name="{{movieModal.title}}" 
-    image="{{movieModal.backdrop_path}}" 
+    image="{{movieModal.poster_path}}" 
+    image-path="{{movieImgPath}}"
     date="{{ movieModal.release_date | date: 'MM/yyyy'}}"
     overview="{{movieModal.overview}}"
     vote-count="{{ movieModal.vote_count}}"

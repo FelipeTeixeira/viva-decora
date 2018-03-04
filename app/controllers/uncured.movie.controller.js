@@ -14,7 +14,7 @@
         var init = function() {
 
             var bodyImgChange = function () {
-                var image = 'https://image.tmdb.org/t/p/w600' + $scope.movieList[0].backdrop_path;
+                var image = $scope.movieImgPath +'w600' + $scope.movieList[0].backdrop_path;
                 document.querySelector("body").style.backgroundImage = "url(" + image + ")";
             }
 

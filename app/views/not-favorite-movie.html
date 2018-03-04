@@ -1,16 +1,17 @@
-	<section class="thumbnail-container">
-		<h1 class="title-page">
-			FILMES NÃO CURTIDOS
-		</h1>
+<section class="thumbnail-container">
+	<h1 class="title-page">
+		FILMES NÃO CURTIDOS
+	</h1>
 
-		<card-movie ng-repeat="movie in movieList" 
-			title="{{movie.title}}" 
-			image="{{movie.backdrop_path}}"			
-			overview="{{movie.overview}}"	
-			vote-count="{{movie.vote_count}}" 
-			vote-average="{{movie.vote_average}}"
-			action="openModal(movie)"
-			></card-movie>
-	</section>
+	<card-movie ng-repeat="movie in movieList" 
+		title="{{movie.title}}" 
+		image="{{movie.poster_path}}"			
+		image-path="{{movieImgPath}}"
+		overview="{{movie.overview}}"	
+		vote-count="{{movie.vote_count}}" 
+		vote-average="{{movie.vote_average}}"
+		action="openModal(movie)">
+		</card-movie>
+</section>
 
-	<not-movie count-movie="{{movieList.length}}"></not-movie>
+<not-movie count-movie="{{movieList.length}}"></not-movie>

@@ -28,6 +28,8 @@
             $scope.closeModal = function() {
                 hideModal();
             }            
+
+            $scope.movieImgPath = 'https://image.tmdb.org/t/p/';
         };
 
         init();

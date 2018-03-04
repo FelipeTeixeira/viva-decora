@@ -1,12 +1,12 @@
 @media (max-width: $screen-tablet-max) {
     .is-menu-active {
-    .menu {
-        @include transform(translateX(0));
-    }
+        .menu {
+            @include transform(translateX(0));
+        }
 
-    .header,
-    main {
-        @include transform(translateX($menu-width));
+        .header,
+        main {
+            @include transform(translateX($menu-width));
         }
     }
 }
