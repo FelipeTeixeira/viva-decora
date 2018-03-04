@@ -157,6 +157,8 @@
     justify-content: space-around;
     max-width: 294px;
     margin: 18px auto 16px;
+    user-select: none;
+    
     @media (min-width: $screen-tablet-min) {
         margin: 62px auto;
     }

@@ -7,18 +7,17 @@
     UncuredMovieController.$inject = ['$scope', 'UncuredMovieFactory'];
 
     function UncuredMovieController($scope, UncuredMovieFactory) {
-        
-        //lista  exibir os filmes pro usuario
+        var nextPage = false;
+
         $scope.movieList = null;
 
         var init = function() {
-
             var bodyImgChange = function () {
-                var image = $scope.movieImgPath +'w600' + $scope.movieList[0].backdrop_path;
+                var image = $scope.movieImgPath +'w500' + $scope.movieList[0].backdrop_path;
                 document.querySelector("body").style.backgroundImage = "url(" + image + ")";
             }
 
-            // Carrega a lista de filmes
+            // UPLOAD MOVIE LIST
             if (UncuredMovieFactory.movies !== null) {
                 $scope.movieList = UncuredMovieFactory.movies.results;
             } else {
@@ -31,12 +30,15 @@
             var nextMovie = function (movie) {
                 $scope.movieList.splice($scope.movieList.indexOf(movie), 1);
                 bodyImgChange();
+                
                 if ($scope.movieList.length === 1) {
-                    // NEXT PAGE API
-                    UncuredMovieFactory.loadMovies().then(function (items) {
+                    
+                    // API - NEXT PAGE
+                    nextPage = true;
+                    UncuredMovieFactory.loadMovies(nextPage).then(function (items) {
                         return $scope.movieList = items;
                     });
-                }
+                }                
             }
 
             $scope.like = function (movie) {
