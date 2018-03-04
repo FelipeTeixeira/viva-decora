@@ -1,8 +1,11 @@
 (function() {
   'use strict';
-    angular.module('vidaDecora-app', ['ui.router', 'directivesApp']);
+    angular.module('vidaDecora-app', ['ui.router', 'directivesApp'])
 
-  angular.module('vidaDecora-app')
+    .constant('config', {
+        apiUrl: '69f1641d5fcc719594bd106ce4fda513'
+    })
+
     .run(function($rootScope, $location) {
         $rootScope.$location = $location;
         
@@ -15,9 +18,9 @@
         $rootScope.closeMenu = function() {
             html.classList.remove("is-menu-active")
         };
-    });
+    })
 
-    angular.module('vidaDecora-app').filter('cut', function () {
+    .filter('cut', function () {
         return function (value, wordwise, max, tail) {
             if (!value) return '';
 

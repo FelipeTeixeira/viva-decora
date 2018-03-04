@@ -27,12 +27,12 @@ main {
 
     @media (min-width: $screen-tablet-min) {
         padding: 40px 0 40px;
+        // RODAPE FIXO
+        min-height: calc(100vh - #{$footer-height} - 150px);
     }
 
     @media (min-width: $screen-desktop-min) {
         padding: 40px 0 0;
-        // RODAPE FIXO
-        min-height: calc(100vh - #{$footer-height} - 150px);
     }
 }
 
