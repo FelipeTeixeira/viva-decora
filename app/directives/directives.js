@@ -71,4 +71,19 @@ angular.module("directivesApp", [])
 	ddo.templateUrl = "directives/templates/review-favorites.html";
 
 	return ddo;
+})
+
+.directive('onErrorSrc', function () {
+
+	var ddo = {};
+
+	ddo.link = function (scope, element, attrs) {
+		element.bind('error', function () {
+			if (attrs.src != attrs.onErrorSrc) {
+				attrs.$set('src', attrs.onErrorSrc);
+			}
+		});
+	}
+
+	return ddo;
 });

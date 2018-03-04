@@ -1,52 +1,58 @@
-    <div ng-repeat="movie in movieList" class="uncuredMovie-container">
-        <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
-            <img ng-if="movie.backdrop_path" ng-src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" alt="{{movie.title}}" class="uncuredMovie-img" itemprop="image">
-            <figcaption class="uncuredMovie-info">
-                <h1 itemprop="name" class="uncuredMovie-name">
-                    {{movie.title}}
-                </h1>
+<div ng-repeat="movie in movieList" class="uncuredMovie-container">
+    <figure class="uncuredMovie" itemscope itemtype="http://schema.org/Movie">
 
-                <div class="uncuredMovie-review">
-                    <review-favorites vote-average="{{movie.vote_average}}"></review-favorites>
+        <img ng-src="https://image.tmdb.org/t/p/w600{{movie.backdrop_path}}" 
+             alt="{{movie.title}}" 
+             class="uncuredMovie-img" 
+             itemprop="image "
+             onerror="this.src='assets/img/logo-viva-decora.svg'">
 
-                    <div class="uncuredMovie-review-total">
-                        ({{ movie.vote_count}} avaliações)
-                    </div>
+        <figcaption class="uncuredMovie-info">
+            <h1 itemprop="name" class="uncuredMovie-name">
+                {{movie.title}}
+            </h1>
+
+            <div class="uncuredMovie-review">
+                <review-favorites vote-average="{{movie.vote_average}}"></review-favorites>
+
+                <div class="uncuredMovie-review-total">
+                    ({{ movie.vote_count}} avaliações)
                 </div>
-                <p class="uncuredMovie-details">
-                    <span itemprop="dateCreated">
-                        {{ movie.release_date | date: 'MM/yyyy'}}
-                    </span>
-                </p>
-                <p class="uncuredMovie-synopsis" itemprop="description">
-                    {{movie.overview | cut:true:100:' ...'}}
-                </p>
-                <a ng-click="openModal(movie)" class="uncuredMovie-viewSynopsis">
-                    Ver Sinopse
-                </a>
-            </figcaption>
-        </figure>
-
-        <div class="uncuredMovie-action">
-            <button class="btn btn-round" ng-click="unlike(movie)">
-                <i class="icon icon-n-like"></i>
-                <span class="btn-name">
-                    Não curti
+            </div>
+            <p class="uncuredMovie-details">
+                <span itemprop="dateCreated">
+                    {{ movie.release_date | date: 'MM/yyyy'}}
                 </span>
-            </button>
+            </p>
+            <p class="uncuredMovie-synopsis" itemprop="description">
+                {{movie.overview | cut:true:100:' ...'}}
+            </p>
+            <a ng-click="openModal(movie)" class="uncuredMovie-viewSynopsis">
+                Ver Sinopse
+            </a>
+        </figcaption>
+    </figure>
 
-            <button class="btn btn-jump" ng-click="jump(movie)">
-                Pular
-            </button>
+    <div class="uncuredMovie-action">
+        <button class="btn btn-round" ng-click="unlike(movie)">
+            <i class="icon icon-n-like"></i>
+            <span class="btn-name">
+                Não curti
+            </span>
+        </button>
 
-            <button class="btn btn-round" ng-click="like(movie)">
-                <i class="icon icon-like"></i>
-                <span class="btn-name">
-                    Curti
-                </span>
-            </button>
-        </div>
+        <button class="btn btn-jump" ng-click="jump(movie)">
+            Pular
+        </button>
+
+        <button class="btn btn-round" ng-click="like(movie)">
+            <i class="icon icon-like"></i>
+            <span class="btn-name">
+                Curti
+            </span>
+        </button>
     </div>
+</div>
 
 
 <div ng-show="movieList.length === 0">
