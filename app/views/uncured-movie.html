@@ -23,6 +23,8 @@
                 <span itemprop="dateCreated">
                     {{ movie.release_date | date: 'yyyy'}}
                 </span>
+                -
+                {{movie.genres}}
             </p>
             <p class="uncuredMovie-synopsis" itemprop="description">
                 {{movie.overview | cut:true:100:' ...'}}

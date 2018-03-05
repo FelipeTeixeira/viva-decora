@@ -10,9 +10,10 @@
     name="{{movieModal.title}}" 
     image="{{movieModal.poster_path}}" 
     image-path="{{movieImgPath}}"
-    date="{{ movieModal.release_date | date: 'MM/yyyy'}}"
+    date="{{ movieModal.release_date | date: 'yyyy'}}"
     overview="{{movieModal.overview}}"
     vote-count="{{ movieModal.vote_count}}"
     vote-average="{{ movieModal.vote_average}}"
+    genres="{{ movieModal.genres}}"
     close-modal="closeModal()"
 ></modal-movie>

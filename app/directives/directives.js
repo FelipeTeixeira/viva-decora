@@ -35,6 +35,7 @@ angular.module("directivesApp", [])
 		overview: "@",
 		voteCount: "@",
 		voteAverage: "@",
+		genres: "@",
 		closeModal: '&'
 	};
 
