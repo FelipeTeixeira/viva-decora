@@ -41,7 +41,7 @@
 
     .thumbnail-img {
         @extend %movie-img;
-        
+
         @media (min-width: $screen-tablet-min) {
             width: 294px;
             height: 350px;
@@ -127,10 +127,10 @@
 }
 .thumbnail-notMovie {
     text-align: center;
-    margin: 20px auto;
+    margin: 100px auto 0;
 
     @media (min-width: $screen-monitor-min) {
-        margin: 15vh auto 0;
+        margin: 12vh auto 0;
     }
 
     .thumbnail-notMovie-img {

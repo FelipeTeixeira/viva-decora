@@ -47,13 +47,6 @@
     background-position: center center;
     @include bgCover();
     transition: background .2s ease;
-    // mobile sem rodape
-    min-height: calc(100vh);
-
-    @media (min-width: $screen-tablet-min) {
-        // desktop com rodape
-        min-height: calc(100vh - #{$footer-height});
-    }
 
     .header-bg {
         background: none;

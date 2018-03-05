@@ -2,7 +2,7 @@
 // se eu colocar a TAG <nav> dentro da classe .header, eu nao consigo fazer a transição utilizando o transform
 
 .header-bg {
-    background-image: linear-gradient(to bottom, rgba(255, 28, 28, 0.8) 0%, rgba(255, 86, 86, 1) 100%);
+    background: linear-gradient(135deg, #ff5656 0%,#ff1c1c 100%);
     animation: header 1s;
     z-index: 10;
     position: relative;
@@ -17,7 +17,6 @@
     flex-flow: row nowrap;
     align-items: center;
     transition: transform 0.2s ease;
-
 
     .header-logo {
         margin: auto;
