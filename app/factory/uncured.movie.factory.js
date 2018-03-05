@@ -19,7 +19,7 @@
                 
                 $http({
                     method: 'GET',
-                    url: 'https://api.themoviedb.org/4/list/1?api_key=' + config.apiUrl + '&page=' + page
+                    url: 'https://api.themoviedb.org/4/list/1?api_key=' + config.apiKey + '&page=' + page
                 }).then(function (response) {                    
                     movies = movies ? movies.concat(response.data.results) : response.data.results;
                     deferred.resolve(movies);

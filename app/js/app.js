@@ -3,10 +3,11 @@
     angular.module('vidaDecora-app', ['ui.router', 'directivesApp'])
 
     .constant('config', {
-        apiUrl: '69f1641d5fcc719594bd106ce4fda513'
+        apiKey: '69f1641d5fcc719594bd106ce4fda513',
+        movieImgPath: 'https://image.tmdb.org/t/p/'
     })
 
-    .run(function($rootScope, $location) {
+    .run(function ($rootScope, $location) {
         $rootScope.$location = $location;
         
         // MENU

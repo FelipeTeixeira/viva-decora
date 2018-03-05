@@ -4,10 +4,11 @@
     angular.module('vidaDecora-app')
       .controller('MasterController', MasterController);
 
-    MasterController.$inject = ['$scope', 'UncuredMovieFactory'];
+    MasterController.$inject = ['$scope', 'config'];
 
-    function MasterController($scope, UncuredMovieFactory) {
+    function MasterController($scope, config) {
         var init = function() {
+            $scope.movieImgPath = config.movieImgPath;
             
             // MODAL
             var showModal = function (html, modal) {                
@@ -20,16 +21,14 @@
                 document.querySelector("#modal-movie").classList.remove("is-modal-active");
             }
 
-            $scope.openModal = function(movie) {
-                showModal();
+            $scope.openModal = function(movie) {                
                 $scope.movieModal = movie;
+                showModal();
             }
 
             $scope.closeModal = function() {
                 hideModal();
-            }            
-
-            $scope.movieImgPath = 'https://image.tmdb.org/t/p/';
+            }
         };
 
         init();
