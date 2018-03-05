@@ -12,20 +12,20 @@
         Viva Decora
     </title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="vendor/angular.min.js"></script>
-    <script src="vendor/angular-ui-router.min.js"></script>
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/angular-ui-router.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/routes.js"></script>
 
     <!-- CONTROLLERS -->
-    <script src="controllers/master.controller.js"></script>
-    <script src="controllers/uncured.movie.controller.js"></script>
-    <script src="controllers/favorite.movie.controller.js"></script>
-    <script src="controllers/not.favorite.movie.controller.js"></script>
+    <script src="js/controllers/master.controller.js"></script>
+    <script src="js/controllers/uncured.movie.controller.js"></script>
+    <script src="js/controllers/favorite.movie.controller.js"></script>
+    <script src="js/controllers/not.favorite.movie.controller.js"></script>
     <!-- FACTORY -->
-    <script src="factory/uncured.movie.factory.js"></script>
+    <script src="js/factory/uncured.movie.factory.js"></script>
     <!-- DIRECTIVES -->
-    <script src="directives/directives.js"></script>
+    <script src="js/directives/directives.js"></script>
 </head>
     <body ng-class="($location.path() === '/filmes-nao-curados' ? 'is-pg-uncured' : 'p-backgroundImage-none')">
         <div ui-view></div>

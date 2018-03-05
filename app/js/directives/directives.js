@@ -16,7 +16,7 @@ angular.module("directivesApp", [])
 		action: '&'
 	};
 
-	ddo.templateUrl = "directives/templates/card-movie.html";
+	ddo.templateUrl = "js/directives/templates/card-movie.html";
 
 	return ddo;
 })
@@ -39,7 +39,7 @@ angular.module("directivesApp", [])
 		closeModal: '&'
 	};
 
-	ddo.templateUrl = "directives/templates/modal-movie.html";
+	ddo.templateUrl = "js/directives/templates/modal-movie.html";
 
 	return ddo;
 })
@@ -56,7 +56,7 @@ angular.module("directivesApp", [])
 		width: "@"
 	};
 
-	ddo.templateUrl = "directives/templates/review-favorites.html";
+	ddo.templateUrl = "js/directives/templates/review-favorites.html";
 
 	return ddo;
 })
@@ -88,7 +88,7 @@ angular.module("directivesApp", [])
 		countMovie: "@"
 	};
 
-	ddo.templateUrl = "directives/templates/not-movie.html";
+	ddo.templateUrl = "js/directives/templates/not-movie.html";
 
 	return ddo;
 })
